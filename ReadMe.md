@@ -7,7 +7,7 @@ Here is a single file json object:
 {
     "fileName": "Helo Foo Bar.docx",
     "encodingType": "Base64",
-    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRl...FNwAAAPAAAAAAAAAAAAAAAAADgfAAB3b3JkL3N0eWxlcy54bWxQSwUGAAAAAAsACwDBAgAAjyoAAAAA"
+    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRl...bWxQSwUGAAAAAAsACwDBAgAAjyoAAAAA"
   }
   ```
 
@@ -17,7 +17,7 @@ Here is a an array of files json object:
   {
     "fileName": "Helo Foo Bar.docx",
     "encodingType": "Base64",
-    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtb...AAADgfAAB3b3JkL3N0eWxlcy54bWxQSwUGAAAAAAsACwDBAgAAjyoAAAAA"
+    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtb...QSwUGACwDBAgAAjyoAAAAA"
   },
   {
     "fileName": "Helo Foo Bar.pdf",
@@ -36,7 +36,7 @@ $ go run main.go
   {
     "fileName": "Helo Foo Bar.docx",
     "encodingType": "Base64",
-    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtb...AAADgfAAB3b3JkL3N0eWxlcy54bWxQSwUGAAAAAAsACwDBAgAAjyoAAAAA"
+    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtb...AAAsACwDBAgAAjyoAAAAA"
   },
   {
     "fileName": "Helo Foo Bar.pdf",
@@ -44,6 +44,10 @@ $ go run main.go
     "encodedData": "JVBERi0xLjUKJcOkw7zDtsOfCjIgMCBvYmoKPDwvTGVuZ3RoIDMgMCBSL0ZpbHRl...HhyZWYKODYyNwolJUVPRgo="
   }
 ]
+```
+
+New file should now be created with "new_" prepended to the old file names:
+```
 $ ls *docx *pdf
 'Helo Foo Bar.docx'  'Helo Foo Bar.pdf'  'new_Helo Foo Bar.docx'  'new_Helo Foo Bar.pdf'
 ```
