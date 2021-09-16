@@ -2,7 +2,7 @@ A simple example of embedding binary base64 encoded data in a json object.
 
 NOTE: **NOT Production ready and never will be**.  Just a simple example of what it takes will little to no error handling, everything in main.
 
-The *main.go* code will take the 2 included 'Helo Foo Bar.docx' and 'Helo Foo Bar.pdf' files in the project root and convert them to base64 URLEncoded json objects.  It will then print out a JSON array of those files with a fileName, encodingType, encodedData properties.  It then takes that JSON object and convert it back to a new files prepending "new_" to the original fileName.  You should be left with 2 docx and 2 pdf files that are the same except for their names.
+The *main.go* code will take the 2 included 'Helo Foo Bar.docx' and 'Helo Foo Bar.pdf' files in the project root and convert them to base64 URLEncoded json objects.  It will then print out a JSON array of those files with a fileName, encodingType, encodedData properties.  It then takes that JSON objects and use them to create 2 new files prepending "new_" to the original fileName. You should be left with 2 docx and 2 pdf files that have the exact same binary content.
 
 Here is a single file json object:
 ```
@@ -13,7 +13,7 @@ Here is a single file json object:
 }
 ```
 
-Here is a an array of files json object:
+Here is a json array of each file base64 URLEncoded:
 ```
 [
   {
@@ -46,7 +46,7 @@ $ go run main.go
 ]
 ```
 
-New file should now be created with "new_" prepended to the old file names:
+2 new files should now be created with "new_" prepended to the old file names:
 ```
 $ ls *docx *pdf
 'Helo Foo Bar.docx'  'Helo Foo Bar.pdf'  'new_Helo Foo Bar.docx'  'new_Helo Foo Bar.pdf'
