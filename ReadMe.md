@@ -89,7 +89,7 @@ $ make darwin || linux || windows
 cross compiles darwin, linux and windows binaries on 386, amd64, arm64
 $ make all
 
-Creates zip files for each platform that contain the binaries for that platform 
+Create zip files for each platform that contain the binaries for that platform 
 $ make zips    
 GOOS=darwin GOARCH=amd64 go build -o 'example-darwin-amd64' main.go
 GOOS=darwin GOARCH=arm64 go build -o 'example-darwin-arm64' main.go
