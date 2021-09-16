@@ -78,7 +78,7 @@ go build -o example main.go
 windows:
 go build -o example.exe main.go
 ```
-or again with make with the following targets:
+or again with **make** with the following targets:
 ```
 To compile for your OS only:
 $ make
@@ -89,7 +89,7 @@ $ make darwin || linux || windows
 cross compiles darwin, linux and windows binaries on 386, amd64, arm64
 $ make all
 
-Creats zip files for each platform that contain the binaries for that platform 
+Creates zip files for each platform that contain the binaries for that platform 
 $ make zips    
 GOOS=darwin GOARCH=amd64 go build -o 'example-darwin-amd64' main.go
 GOOS=darwin GOARCH=arm64 go build -o 'example-darwin-arm64' main.go
