@@ -1,6 +1,6 @@
 A simple example of embedding binary base64 encoded data in a json object. 
 
-NOTE: **NOT Production ready and never will be**.  Just a simple example of what it takes will little to no error handling, everything in main.
+NOTE: **NOT Production ready and never will be**.  Just a simple example of what it takes with little to no error handling and everything in main.
 
 The *main.go* code will take the 2 included 'Helo Foo Bar.docx' and 'Helo Foo Bar.pdf' files in the project root and convert them to base64 URLEncoded json objects.  It will then print out a JSON array of those files with a fileName, encodingType, encodedData properties.  It then takes the JSON objects and uses them to create 2 new files prepending "new_" to the original fileName. You should be left with 2 docx and 2 pdf files that have the exact same binary content.
 
