@@ -1,6 +1,6 @@
 Example of embedding binary base64 encoded data in a json object.
 
-The main.go code will take the 2 included binary files in the project root and convert them to base64 URLEncoded json objects.  It will then take each JSON object and convert it back to a file prepeinding "new_" to the original fileName.
+The main.go code will take the 2 included binary files in the project root and convert them to base64 URLEncoded json objects.  It will then take each JSON object and convert it back to a file prepending "new_" to the original fileName.
 
 Here is a single file json object:
 ```
