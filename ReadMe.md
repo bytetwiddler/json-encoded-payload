@@ -8,8 +8,8 @@ Here is a single file json object:
     "fileName": "Helo Foo Bar.docx",
     "encodingType": "Base64",
     "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRl...bWxQSwUGAAAAAAsACwDBAgAAjyoAAAAA"
-  }
-  ```
+}
+```
 
 Here is a an array of files json object:
 ```
