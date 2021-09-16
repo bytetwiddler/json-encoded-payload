@@ -16,8 +16,13 @@ type File struct {
 }
 
 func main() {
+	// create array to hold File objects
 	var filesSlice []File
+
+	// array of file names
 	inputFiles := []string{"Helo Foo Bar.docx", "Helo Foo Bar.pdf"}
+
+	// for each file reading a byte slice
 	for _, inFile := range inputFiles {
 		// Open file on disk.
 		f, err := os.Open(inFile)
@@ -37,9 +42,7 @@ func main() {
 		filesSlice = append(filesSlice, file)
 	} // end range inputFiles
 
-	// take json array of encoded File objects and write to file
-
-	// pint json array to screen
+	// print json array to screen
 	filesArrayJson, err := json.Marshal(filesSlice)
 	if err != nil {
 		fmt.Println(err)
@@ -48,6 +51,7 @@ func main() {
 	jsonString := string(filesArrayJson)
 	fmt.Println(jsonString)
 
+	// now lets take each json object and decode the EncodedData into new files
 	var fromJsonFilesSlice []File
 	// Unmarshal JSON to the interface.
 	err = json.Unmarshal([]byte(jsonString), &fromJsonFilesSlice)
@@ -55,11 +59,15 @@ func main() {
 		fmt.Println(err.Error())
 		os.Exit(77)
 	}
+
+	// for each File object get the FileName and EncodedData
+	// base64 decode the EnocdedData into a byte slice and
+	// write it to file prepending "new_" to the old file name
 	for _, newfile := range fromJsonFilesSlice {
-		newfilename := fmt.Sprintf("new_%v", newfile.FileName)
+		newFilename := fmt.Sprintf("new_%v", newfile.FileName)
 
 		fileBytes, _ := base64.URLEncoding.DecodeString(newfile.EncodedData)
-		err = ioutil.WriteFile(newfilename, fileBytes, 0644)
+		err = ioutil.WriteFile(newFilename, fileBytes, 0644)
 		if err != nil {
 			fmt.Println(err.Error())
 			os.Exit(66)
