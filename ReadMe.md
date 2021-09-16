@@ -7,7 +7,7 @@ Here is a single file json object:
 {
     "fileName": "Helo Foo Bar.docx",
     "encodingType": "Base64",
-    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRl...bWxQSwUGAAAAAAsACwDBAgAAjyoAAAAA"
+    "encodedData": "UEsDBBQABgAIAA...bWxQSwUGAAAAAAsACwDBAgAAjyoAAAAA"
 }
 ```
 
@@ -17,12 +17,12 @@ Here is a an array of files json object:
   {
     "fileName": "Helo Foo Bar.docx",
     "encodingType": "Base64",
-    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtb...QSwUGACwDBAgAAjyoAAAAA"
+    "encodedData": "UEsDBBQABgAIAAA...QSwUGACwDBAgAAjyoAAAAA"
   },
   {
     "fileName": "Helo Foo Bar.pdf",
     "encodingType": "Base64",
-    "encodedData": "JVBERi0xLjUKJcOkw7zDtsOfCjIgMCBvYmoKPDwvTGVuZ3RoIDMgMCBSL0ZpbHRl...HhyZWYKODYyNwolJUVPRgo="
+    "encodedData": "JVBERi0xLjUKJc...HhyZWYKODYyNwolJUVPRgo="
   }
 ]
 ```
@@ -36,12 +36,12 @@ $ go run main.go
   {
     "fileName": "Helo Foo Bar.docx",
     "encodingType": "Base64",
-    "encodedData": "UEsDBBQABgAIAAAAIQDfpNJsWgEAACAFAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtb...AAAsACwDBAgAAjyoAAAAA"
+    "encodedData": "UEsDBBQABgAIAAA...AAAsACwDBAgAAjyoAAAAA"
   },
   {
     "fileName": "Helo Foo Bar.pdf",
     "encodingType": "Base64",
-    "encodedData": "JVBERi0xLjUKJcOkw7zDtsOfCjIgMCBvYmoKPDwvTGVuZ3RoIDMgMCBSL0ZpbHRl...HhyZWYKODYyNwolJUVPRgo="
+    "encodedData": "JVBERi0xLjUKJc...HhyZWYKODYyNwolJUVPRgo="
   }
 ]
 ```
