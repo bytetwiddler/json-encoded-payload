@@ -12,11 +12,11 @@ darwin:
 
 linux:
 	GOOS=linux GOARCH=amd64 go build -o 'example-linux-amd64' main.go
-	GOOS=linux GOARCH=386 go build -o 'example-linux-386' main.go
+	GOOS=linux GO386=softfloat GOARCH=386 go build -o 'example-linux-386' main.go
 
 windows:
 	GOOS=windows GOARCH=amd64 go build -o 'example-windows-amd64.exe' main.go
-	GOOS=windows GOARCH=386 go build -o 'example-windows-386.exe' main.go
+	GOOS=windows GO386=softfloat GOARCH=386 go build -o 'example-windows-386.exe' main.go
 
 run:
 	go run main.go
